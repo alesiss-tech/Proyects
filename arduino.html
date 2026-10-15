@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arduino - Proyecto Tecnológico</title><link rel="stylesheet" href="estilo.css"></head>
+<body>
+<header><div class="brand">Proyecto Tecnológico</div><nav>
+<a href="index.html">Inicio</a>
+<a href="arduino.html">Arduino</a>
+<a href="appinventor.html">App Inventor</a>
+<a href="makecode.html">MakeCode</a>
+<a href="tinkercad.html">Tinkercad</a>
+<a href="impresion3d.html">Impresión 3D</a>
+<a href="paginaweb.html">Página web</a><a href="pilasbloque.html">Pilas Bloque</a>
+</nav></header>
+<main><section class="project-hero">
+<div><h2>Arduino</h2><p>Electrónica y programación</p></div>
+<div class="hero-drawing">🔌</div>
+</section>
+<section><h2>¿Qué es Arduino?</h2><p>Arduino es una plataforma de hardware y software utilizada para crear proyectos electrónicos y sistemas programables. Permite controlar sensores, luces, motores y muchos dispositivos más.
+</p>
+<h2>¿ De que trata el proyecto?</h2><p> Proyecto: Zapatilla inteligente con Arduino
+Nuestro proyecto consiste en el desarrollo de una zapatilla inteligente capaz de detectar obstáculos mediante un sensor ultrasónico y emitir una señal sonora de advertencia.
+<br>
+La idea surgió a partir de la necesidad de utilizar la tecnología para crear una herramienta que pueda servir como apoyo para personas con discapacidad visual. El sistema permite detectar si existe un objeto delante de la persona y avisarle mediante un buzzer.
+<br>
+Para desarrollar el proyecto utilizamos Arduino Uno y Tinkercad, una plataforma que permite simular circuitos electrónicos y probar programas antes de construirlos físicamente.
+<br>
+El funcionamiento de la zapatilla se basa principalmente en un sensor ultrasónico HC-SR04.
+<br>
+Este sensor se coloca en la parte delantera de la zapatilla y permite detectar objetos que se encuentran delante de ella. Para hacerlo, envía una señal ultrasónica y mide el tiempo que tarda en regresar después de rebotar contra un objeto.
+<br>
+Arduino recibe esa información y calcula aproximadamente la distancia a la que se encuentra el obstáculo.
+<br>
+Dependiendo de esa distancia, el programa puede hacer que el buzzer emita diferentes señales sonoras. De esta manera, cuanto más cerca se encuentra el obstáculo, más rápida puede ser la advertencia.
+<br>
+El circuito fue realizado inicialmente como una simulación en Tinkercad para comprobar que las conexiones y el programa funcionaran correctamente.
+</p>
+<h2>que componentes usamos?</h2><p>
+Para realizar el proyecto utilizamos:
+<br>
+Arduino Uno: es el controlador principal del circuito. Recibe la información del sensor y ejecuta el programa.
+<br>
+Sensor ultrasónico HC-SR04: detecta los obstáculos y permite calcular su distancia.
+<br>
+Buzzer: produce las señales sonoras de advertencia.
+<br>
+Protoboard: permite realizar las conexiones electrónicas sin necesidad de soldar.
+<br>
+Cables jumper: permiten conectar los diferentes componentes.
+<br>
+<br>
+Resistencia y LED: fueron considerados dentro de la propuesta inicial como indicadores adicionales del sistema, aunque la versión funcional que terminamos probando se centró en el sensor y el buzzer.
+</p>
+<h2>Cómo se realizo? </h2><p>
+El proyecto se realizó paso a paso en Tinkercad.
+<br>
+<br>
+Primer paso: seleccionar los componentes
+<br>
+<br>
+Primero identificamos los componentes que íbamos a utilizar y los colocamos dentro del espacio de trabajo de Tinkercad.
+<br>
+Uno de los objetivos fue trabajar solamente con los materiales disponibles y evitar agregar componentes innecesarios.
+<br>
+<br>
+Segundo paso: conectar Arduino y la protoboard
+<br>
+<br>
+Comenzamos conectando el Arduino Uno con la protoboard, utilizando el pin de 5V para proporcionar alimentación y un pin GND para establecer la conexión a tierra.
+<br>
+<br>
+Esto permitió utilizar los rieles de alimentación de la protoboard para conectar posteriormente los demás componentes.
+<br>
+<br>
+Tercer paso: conectar el sensor ultrasónico
+<br>
+<br>
+Después incorporamos el sensor ultrasónico.
+<br>
+<br>
+En un principio hubo una confusión sobre el modelo del sensor, ya que se consideró la posibilidad de que fuera un sensor de tres pines. Al revisar mejor el componente utilizado en Tinkercad, comprobamos que el sensor utilizado en el circuito final tenía las conexiones correspondientes al HC-SR04, con alimentación, tierra, TRIG y ECHO.
+<br>
+<br>
+Las conexiones quedaron organizadas de esta manera:
+<br>
+<br>
+Sensor HC-SR04	Arduino
+<br>
+VCC	5V
+<br>
+GND	GND
+<br>
+TRIG	Pin digital 9
+<br>
+ECHO	Pin digital 10
+<br>
+Cuarto paso: conectar el buzzer
+<br>
+<br>
+Luego agregamos el buzzer para que pudiera funcionar como sistema de advertencia.
+<br>
+El Arduino controla el buzzer mediante uno de sus pines digitales. Cuando el programa determina que existe un obstáculo dentro de determinada distancia, genera un sonido.
+<br>
+<br>
+Quinto paso: realizar la programación
+<br><br>
+Una vez realizadas las conexiones, comenzamos a programar Arduino desde el apartado Código de Tinkercad.
+<br><br>
+El programa se encarga de:
+<br><br>
+1. Activar el sensor.
+<br>
+2. Enviar una señal mediante TRIG.
+<br>
+3. Recibir la respuesta mediante ECHO.
+<br>
+4. Medir el tiempo que tarda la señal en regresar.
+<br>
+5. Calcular la distancia.
+<br>
+6. Comparar la distancia obtenida.
+<br>
+7. Activar el buzzer según la situación.
+<br>
+Una parte fundamental del programa es el cálculo de la distancia:
+<br>
+distancia = duracion * 0.034 / 2;
+<br>
+Esto permite transformar el tiempo medido por el sensor en una distancia aproximada en centímetros.
+</p></section>
+<section class="members"><div class="small-icon">⚙️</div><div><h2>Integrantes</h2><ul><li>Ramón</li><li>Ismael</li><li>Jonathan</li><li>Santino</li><li>Federico</li><li>Benjamin</li></ul></div></section></main>
+<footer>Proyecto Tecnológico</footer>
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MakeCode - Proyecto Tecnológico</title><link rel="stylesheet" href="estilo.css"></head>
+<body>
+<header><div class="brand">Proyecto Tecnológico</div><nav>
+<a href="index.html">Inicio</a>
+<a href="arduino.html">Arduino</a>
+<a href="appinventor.html">App Inventor</a>
+<a href="makecode.html">MakeCode</a>
+<a href="tinkercad.html">Tinkercad</a>
+<a href="impresion3d.html">Impresión 3D</a>
+<a href="paginaweb.html">Página web</a><a href="pilasbloque.html">Pilas Bloque</a>
+</nav></header>
+<main><section class="project-hero">
+<div><h2>MakeCode</h2><p>Programación con bloques</p></div>
+<div class="hero-drawing">🧩</div>
+</section>
+<section><h2>¿Qué es MakeCode?</h2><p>MakeCode es una plataforma educativa que permite aprender a programar utilizando bloques y diferentes dispositivos, como micro:bit, entre otros. los chicos hicieron dos juegos uno llamado torturecicla y otro llamado Raticlean
+<br><br>
+Torturecicla: Desafío Marino es un juego educativo donde controlás una tortuga marina que debe recolectar basura flotando en el océano mientras esquiva proyectiles peligrosos. Cada basura recolectada suma puntos y muestra un dato curioso sobre el cuidado del planeta y el reciclaje. El objetivo es concientizar sobre el daño que genera la basura en el mar y la importancia de reciclar. El juego termina cuando se pierden todas las vidas, mostrando el puntaje máximo alcanzado.
+<br><br>
+cómo se fue construyendo el trabajo:
+<br>
+1. Creación del personaje principal
+   Se diseñó una tortuga pixel art mirando hacia la derecha y se la configuró como el jugador. Se activó la opción para que no pueda salir de la pantalla.
+   <br>
+   2. Sistema de vidas
+   Se agregaron corazones personalizados (sprites de 3, 2 y 1 corazón). Cada vez que un proyectil toca a la tortuga, se resta una vida y se cambia la imagen de los corazones. Al llegar a cero vidas, el juego termina.
+   <br>
+   3. Proyectiles enemigos
+   Se programó que aparezcan proyectiles desde un costado de la pantalla a intervalos regulares. Estos dañan a la tortuga al contactarla.
+   <br>
+   4. Sistema de recolección de basura
+   Se hizo que aparezcan sprites de basura que se mueven por la pantalla. Cuando la tortuga los toca, la basura desaparece y se suma 1 punto al puntaje..
+   <br>
+   5. Puntaje y récord
+   El puntaje se va acumulando al recolectar basura. Al perder todas las vidas, el juego muestra automáticamente el puntaje máximo logrado.
+   <br><br>
+vídeo de ejemplo del juego torturecicla:
+<br>
+<video width="167" controls>
+<source src="tortuga.mp4" type="video/mp4">
+</video>
+<br><br>
+Raticlean: es un videojuego creado en Microsoft MakeCode Arcade que busca concientizar sobre el problema de la basura y la importancia de mantener los espacios limpios. El ratoncito debe recorrer diferentes  habitaciones de una mazmorra y recoger los residuos y las frutas que están distribuidos por el mapa.
+<br><br>
+ COMO ES?
+ <br>
+ AL INICIAR:
+El juego carga el mapa de teselas (laberinto), crea al personaje de una pequeña rata, crea una barra de estado tipo Energía y la engancha al personaje, activa el movimiento con botones, hace que la cámara siga al personaje, pone una cuenta regresiva de 90 segundos y configura los mensajes de victoria “limpiaste toda la basura” y derrota “perdiste”.
+<br>
+2. CONTROLES Y ANIMACIÓN:
+Cuando se presiona el botón derecha, izquierda, subir o bajar, se anima el sprite del personaje con 4 cuadros diferentes mirando hacia esa dirección en bucle. Además hay un bloque “on game update” que verifica si se está presionando algún botón de movimiento. Si no se presiona ninguno, detiene todas las animaciones para que el personaje quede quieto
+<br>
+3. SPRITES:
+Los sprites fueron dibujados en 16x16 y 25x27 en el editor. El personaje principal con gorrito verde visto de frente, de espalda y de costado, y varios objetos recolectables como manzanas, frutillas, cerezas y bas
+<br>
+4. MECÁNICA DE RECOLECCIÓN – VERSIÓN 1 (Te quita energía):
+<br>Cuando la ratita toca la basura, la barra de energía baja -20, suena una melodía rápida en segundo plano y el puntaje sube +1. 
+5. MECÁNICA DE RECOLECCIÓN – VERSIÓN 2 (Te da energía):
+Hay tres bloques de este tipo:
+- Al tocar la manzana roja: energía +50%
+- Al tocar la frutilla: energía +25%
+- Al tocar la cereza: energía +50% y tiempo +15 segundos
+Estos son los power-ups que te permiten recuperarte.
+6. SISTEMA DE PUNTUACIÓN, TIEMPO Y ENERGÍA:
+El juego tiene tres condiciones de final:
+- Si el puntaje llega a 18, game over con mensaje “LIMPIASTE TODA LA BASURA”.
+- Si la cuenta regresiva llega a cero, game over con mensaje PERDISTE.
+- Si la barra de energía llega a cero, game over con mensaje PERDISTE.
+<br>
+7. MÚSICA DE FONDO:
+En un bloque “para siempre” reproduce una melodía hasta que termine el juego. Es la música base del juego, distinta a los sonidos cortos de recolección.
+<br><br>
+
+Video ejemplos del juego de Raticlean:
+<br><video width="300" controls>
+<source src="rata.mp4" type="video/mp4">
+</video>
+</p></section>
+<a href="https://drive.google.com/drive/folders/19X4UQFWvQ6OJ69fVG37UX0dVnVuGznTF" target="_blank">
+  <button>ver imágenes sobre el proyecto</button>
+</a>
+<section class="members"><div class="small-icon">🧩</div><div><h2>Integrantes</h2><ul><li>Carlos</li><li>Miguel</li><li>Johana</li><li>Yuliana</li><li>Martina</li></ul></div></section></main>
+<footer>Proyecto Tecnológico</footer>
+</body></html>

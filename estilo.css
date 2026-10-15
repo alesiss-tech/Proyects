@@ -1,0 +1,27 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#eef7fb;color:#12304d}
+header{background:#062f59;color:white;display:flex;align-items:center;gap:28px;padding:14px 4%;position:sticky;top:0;z-index:5;box-shadow:0 3px 12px #0002}
+.brand{font-size:21px;font-weight:bold;white-space:nowrap}
+nav{display:flex;gap:7px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:13px;padding:9px 12px;border-radius:8px}
+nav a:hover{background:#1976d2}
+main{width:min(1050px,92%);margin:35px auto}
+section{background:white;border-radius:18px;padding:30px;margin-bottom:24px;box-shadow:0 5px 20px #0b355022}
+.home-intro,.project-hero{min-height:280px;display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(120deg,#e7f8ff,#f3f0ff)}
+.intro-text{max-width:600px}
+h2{font-size:28px;margin-bottom:14px;color:#073866}
+p{line-height:1.7;font-size:16px}
+.hero-drawing{width:270px;height:190px;border-radius:35% 55% 40% 60%;background:#d8f5f3;display:flex;align-items:center;justify-content:center;font-size:100px;box-shadow:inset 0 0 0 12px #fff8;flex-shrink:0}
+.hero-drawing.big{font-size:110px;background:#cfe9ff;position:relative}
+.hero-drawing span{font-size:45px;position:absolute;right:30px;bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.card{background:#edf5fc;border-radius:14px;padding:18px 8px;text-align:center;text-decoration:none;color:#12304d;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 18px #0002}
+.card-icon{font-size:42px;margin-bottom:8px}
+.card h3{font-size:15px}
+.members{display:flex;align-items:flex-start;gap:18px;background:#eaf3fb}
+.members ul{padding-left:22px;line-height:1.8}
+.small-icon{font-size:34px;background:white;border-radius:12px;padding:10px}
+footer{background:#062f59;color:white;text-align:center;padding:18px;margin-top:45px}
+@media(max-width:800px){header{display:block}.brand{margin-bottom:10px}.cards{grid-template-columns:repeat(2,1fr)}.home-intro,.project-hero{flex-direction:column;text-align:center}.hero-drawing{width:220px;height:160px;font-size:80px}}
+@media(max-width:450px){.cards{grid-template-columns:1fr}nav a{font-size:12px;padding:7px}main{width:94%}}
